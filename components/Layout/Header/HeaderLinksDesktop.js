@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import useDelay from 'utils/useDelay';
 import { appendSlash } from 'utils/slugParsers';
+import useWindowLocation from 'utils/useWindowLocation';
 import styles from './styles.module.scss';
 import { DropdownArrow } from '../assets';
 
@@ -16,11 +17,12 @@ const NavLink = ({ link, display, dropdown }) => {
   const [hovering, setHovering] = useState(false);
   const visible = useDelay(hovering, ANIMATION_LENGTH);
   const isDropdown = !!dropdown && dropdown.length > 0;
+  const location = useWindowLocation();
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    setIsActive(typeof window !== 'undefined' && (appendSlash(window.location.pathname) === appendSlash(link)));
-  }, []);
+    setIsActive(appendSlash(location?.pathname || '') === appendSlash(link));
+  }, [location]);
 
   return (
     <div
