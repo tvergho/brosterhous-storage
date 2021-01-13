@@ -1,20 +1,14 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'next/link';
-import { NavLinkType } from 'lib/types';
 import styles from './styles.module.scss';
 
-const defaultPath = '/';
-
-const Footer = ({ links }) => {
+const Footer = () => {
   return (
-    <footer className={styles.footer} />
+    <footer className={styles.footer}>
+      <div className={styles['footer-container']}>
+        <p>© 2021 Brosterhous Storage. All Rights Reserved.</p>
+      </div>
+    </footer>
   );
-};
-
-Footer.propTypes = {
-  links: PropTypes.arrayOf(NavLinkType),
 };
 
 export default Footer;

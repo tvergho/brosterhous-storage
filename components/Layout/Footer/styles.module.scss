@@ -5,8 +5,27 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 135px; 
+  min-height: 70px; 
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: $footer-gray;
+}
+
+.footer-container {
+  width: $container-width;
+  margin: 0 auto;
+
+  p {
+    color: white;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .footer-container {
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
