@@ -66,6 +66,10 @@
   display: flex;
 }
 
+.active {
+  color: $main-blue;
+}
+
 .no-hover:active, .no-hover:hover { opacity: 1; }
 
 .dropdown-inner {

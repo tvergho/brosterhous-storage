@@ -22,7 +22,7 @@ const Logo = () => {
 
 const Header = ({ links }) => {
   const { width } = useWindowSize();
-  const isMobile = !(width > 768);
+  const isMobile = !(width > 1000);
   const [backdropVisible, setBackdropVisible] = useState(false);
 
   return (

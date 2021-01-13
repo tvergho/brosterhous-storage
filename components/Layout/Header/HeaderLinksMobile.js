@@ -6,6 +6,7 @@ import { NavLinkType } from 'lib/types';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import useDelay from 'utils/useDelay';
+import { appendSlash } from 'utils/slugParsers';
 import { motion } from 'framer-motion';
 import { DropdownArrow } from '../assets';
 import styles from './styles.module.scss';
@@ -17,7 +18,7 @@ const Dropdown = ({ links, visible, onClick }) => {
   return (
     <motion.div className={styles['mobile-dropdown']} animate={{ height: visible ? 'auto' : 0 }} transition={{ duration: ANIMATION_LENGTH / 1000 }}>
       {links.map(({ display, link = defaultPath }) => (
-        <Link href={link} passHref key={display}>
+        <Link href={appendSlash(link)} passHref key={display}>
           <a className={styles['nav-link']} onClick={onClick} role="button">
             {display}
           </a>
@@ -61,7 +62,7 @@ const NavLink = ({
             </a>
           )
           : (
-            <Link href={link} passHref key={display}>
+            <Link href={appendSlash(link)} passHref key={display}>
               <a className={styles['mobile-nav-link']} onClick={onClick} role="button">
                 {display}
                 {isDropdown && <DropdownArrow width={45} height={45} />}
@@ -81,7 +82,7 @@ const MobileBackdrop = ({ links, visible, onClick }) => {
       {links && links.map(({ display, link = defaultPath, dropdown }, index) => (
         <NavLink
           display={display}
-          link={link}
+          link={appendSlash(link)}
           dropdown={dropdown}
           key={display}
           onClick={onClick}
