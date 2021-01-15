@@ -1,0 +1,84 @@
+@use "variables" as *;
+
+.sidebar-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: $sidebar-gray;
+  border-radius: 10px;
+  height: auto;
+}
+
+.sidebar-title {
+  font-family: Roboto Slab;
+  padding: 10px 5%;
+  padding-bottom: 15px;
+}
+
+.divider {
+  width: 90%;
+  margin: 0 auto;
+  height: 0px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.2);
+}
+
+.quote-box {
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.3);
+  color: saddlebrown;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+
+  div {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.main {
+  width: 60%;
+
+  h2 {
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: $container-width) {
+  .sidebar {
+    width: 40%;
+  }
+  .main {
+    width: 55%;
+  }
+  .sidebar-layout {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .sidebar-layout {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .main {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .sidebar {
+    margin: 20px;
+    width: calc(100% - 40px)
+  }
+  .sidebar-title {
+    font-size: 1.5rem;
+  }
+}
