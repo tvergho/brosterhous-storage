@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 const PricingTable = ({ prices }) => {
   return (
-    <section className="container">
+    <section>
       <div className={styles.table}>
         {prices.map(({
           size, type, price, buttonText, buttonLink,

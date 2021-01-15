@@ -21,7 +21,10 @@ html, body {
  * Specific elements.
  */
 
-h1 { };
+h1 { 
+  font-size: 2rem; 
+  font-weight: 700;
+};
 h2 { };
 h3 { };
 h4 { };
@@ -74,9 +77,16 @@ button, a {
   cursor: pointer;
 }
 
-.container {
+section {
   width: $container-width;
   margin: 0 auto;
+}
+
+.page-title {
+  text-align: left;
+  align-self: start;
+  font-family: Roboto Slab;
+  color: rgba(0,0,0,0.8);
 }
 
 /*
@@ -84,4 +94,10 @@ button, a {
  */
  html {
   @include fluid-type($min-width, $container-width, $min-font, $max-font);
+}
+
+@media screen and (max-width: $container-width) {
+  .page-title {
+    margin: 0 20px;
+  }
 }

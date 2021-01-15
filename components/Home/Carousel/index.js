@@ -16,7 +16,7 @@ const SlideButton = ({ asset: Asset, onClick }) => {
 
 const ImageCarousel = ({ images, width, height }) => {
   return (
-    <section className="container">
+    <section>
       <div className={styles['carousel-container']}>
         <Carousel
           wrapAround
