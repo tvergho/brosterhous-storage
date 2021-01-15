@@ -1,0 +1,88 @@
+@use "variables" as *;
+
+.table {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0.5px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.cell {
+  width: 25%;
+  font-family: Roboto Slab;
+  color: $table-blue;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 0.5px solid rgba(0,0,0,0.1);
+
+  &:nth-child(4n) {
+    border-right: 0;
+  }
+}
+
+.size, .type {
+  font-size: 1.4rem;
+}
+
+.price {
+  font-size: 1.6rem;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: $footer-gray;
+  color: white;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media screen and (max-width: $container-width) {
+  .table {
+    margin: 30px 20px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .table {
+    justify-content: space-between;
+    border: 0;
+  }
+  .row {
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 48%;
+    border: 0.5px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+  }
+  .cell {
+    width: 100%;
+    padding: 0;
+    margin: 4px 0;
+    border-right: 0;
+  }
+  .price {
+    font-size: 1.4rem;
+  }
+  .button {
+    width: 90%;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+}
