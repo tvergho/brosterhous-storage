@@ -74,6 +74,11 @@ button, a {
   cursor: pointer;
 }
 
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
 /*
  * Responsive font sizing.
  */
