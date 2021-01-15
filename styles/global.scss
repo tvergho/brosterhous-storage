@@ -82,22 +82,9 @@ section {
   margin: 0 auto;
 }
 
-.page-title {
-  text-align: left;
-  align-self: start;
-  font-family: Roboto Slab;
-  color: rgba(0,0,0,0.8);
-}
-
 /*
  * Responsive font sizing.
  */
  html {
   @include fluid-type($min-width, $container-width, $min-font, $max-font);
-}
-
-@media screen and (max-width: $container-width) {
-  .page-title {
-    margin: 0 20px;
-  }
 }

@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+.title {
+  text-align: left;
+  align-self: start;
+  font-family: Roboto Slab;
+  color: rgba(0,0,0,0.8);
+}
+
+@media screen and (max-width: $container-width) {
+  .title {
+    margin: 0 20px;
+  }
+}
