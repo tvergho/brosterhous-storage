@@ -9,7 +9,7 @@ export default function useWindowSize() {
 
   function changeWindowSize() {
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-    setIsMobile(window.innerWidth <= 768);
+    setIsMobile(window.innerWidth <= 1000);
   }
 
   React.useEffect(() => {

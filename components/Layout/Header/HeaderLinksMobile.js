@@ -94,7 +94,7 @@ const MobileBackdrop = ({ links, visible, onClick }) => {
 };
 
 /**
- * Hamburger menu and mobile backdrop for navigation on screen smaller than 768px.
+ * Hamburger menu and mobile backdrop for navigation on screen smaller than 1000px.
  *
  * @param {boolean} visible Determines whether the mobile navigation backdrop is visible.
  * @param {function} setVisible Function to toggle the visibility of the mobile backdrop.

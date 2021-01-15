@@ -42,13 +42,13 @@
 }
 
 .main {
-  width: 60%;
+  width: 65%;
 
   h2 {
     margin: 1rem 0;
   }
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -73,9 +73,13 @@
   .main {
     width: 100%;
     padding: 0 20px;
+
+    p {
+      font-size: 0.9rem;
+    }
   }
   .sidebar {
-    margin: 20px;
+    margin: 40px 20px;
     width: calc(100% - 40px)
   }
   .sidebar-title {
