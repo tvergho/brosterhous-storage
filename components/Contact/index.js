@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InfoSection from './InfoSection';
+import FormSection from './FormSection';
+import MapSection from './MapSection';
 import styles from './styles.module.scss';
 
 const Contact = ({
   address, phone, email, hours,
 }) => {
   return (
-    <section className={styles.contact}>
-      <InfoSection address={address} phone={phone} email={email} hours={hours} />
-    </section>
+    <>
+      <section className={styles.contact}>
+        <FormSection />
+        <InfoSection address={address} phone={phone} email={email} hours={hours} />
+      </section>
+      <MapSection />
+    </>
   );
 };
 

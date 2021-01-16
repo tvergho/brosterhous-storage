@@ -8,10 +8,10 @@ const InfoSection = ({
   const { officeAddress, mailingAddress } = address;
 
   return (
-    <div className={`${styles['contact-section']} ${styles.info}`}>
+    <div className={styles['contact-section']}>
       <div className={styles['info-item']}>
         <h4>Office Location</h4>
-        {officeAddress.map((line) => (<p className={styles.sub}>{line}</p>))}
+        {officeAddress.map((line) => (<p className={styles.sub} key={line}>{line}</p>))}
       </div>
 
       <div className={styles['info-item']}>
@@ -24,7 +24,7 @@ const InfoSection = ({
 
       <div className={styles['info-item']}>
         <h4>Mailing Address</h4>
-        {mailingAddress.map((line) => (<p className={styles.sub}>{line}</p>))}
+        {mailingAddress.map((line) => (<p className={styles.sub} key={line}>{line}</p>))}
       </div>
 
       <div className={styles['info-item']}>
@@ -32,7 +32,7 @@ const InfoSection = ({
         {hours.map((line) => {
           const split = line.split(':');
           if (split.length <= 1) split.push('');
-          return (<p className={styles.sub}><strong>{`${split[0]}: `}</strong>{split[1]}</p>);
+          return (<p className={styles.sub} key={split[0]}><strong>{`${split[0]}: `}</strong>{split[1]}</p>);
         })}
       </div>
     </div>
