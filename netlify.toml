@@ -1,0 +1,3 @@
+[build]
+  functions = "next-automatic-functions"
+  publish = "out"
