@@ -18,7 +18,7 @@ NewsGrid.propTypes = {
     title: PropTypes.string,
     slug: PropTypes.string,
     description: PropTypes.string,
-    date: PropTypes.string,
+    date: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     content: PropTypes.node,
   })),
 };

@@ -1,11 +1,12 @@
 import React from 'react';
-import { SITE_NAME, POSTS, DEFAULT_SIDEBAR } from 'lib/constants';
+import { SITE_NAME, DEFAULT_SIDEBAR } from 'lib/constants';
+import { getAllPosts } from 'lib/posts-api';
 import { NextSeo } from 'next-seo';
 import PageTitle from 'components/PageTitle';
 import SidebarLayout from 'components/SidebarLayout';
 import { NewsGrid } from 'components/News';
 
-const NewsPage = () => {
+const NewsPage = ({ posts }) => {
   const { title, quotes } = DEFAULT_SIDEBAR;
 
   return (
@@ -17,12 +18,20 @@ const NewsPage = () => {
       <PageTitle title="News and Specials" />
       <SidebarLayout>
         <SidebarLayout.Main>
-          <NewsGrid posts={POSTS} />
+          <NewsGrid posts={posts} />
         </SidebarLayout.Main>
         <SidebarLayout.Sidebar title={title} quotes={quotes} />
       </SidebarLayout>
     </>
   );
+};
+
+export const getStaticProps = () => {
+  const posts = getAllPosts();
+
+  return {
+    props: { posts },
+  };
 };
 
 export default NewsPage;
