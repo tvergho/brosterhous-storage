@@ -1,8 +1,11 @@
 import React from 'react';
+import useWindowSize from 'utils/useWindowSize';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const PricingTable = ({ prices }) => {
+  const { isMobile } = useWindowSize();
+
   return (
     <section>
       <div className={styles.table}>
@@ -10,7 +13,7 @@ const PricingTable = ({ prices }) => {
           size, type, price, buttonText, buttonLink,
         }) => (
           <div className={styles.row}>
-            <div className={`${styles.cell} ${styles.size}`}>{size}</div>
+            {(!isMobile || size) && <div className={`${styles.cell} ${styles.size}`}>{size}</div>}
             <div className={`${styles.cell} ${styles.type}`}>{type}</div>
             <div className={`${styles.cell} ${styles.price}`}>{price}</div>
             <div className={`${styles.cell} ${styles['button-container']}`}>

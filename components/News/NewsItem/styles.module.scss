@@ -24,3 +24,9 @@
 .description {
   margin-bottom: 5px !important;
 }
+
+@media screen and (max-width: $mobile-width) {
+  .date {
+    font-size: 0.9rem;
+  }
+}

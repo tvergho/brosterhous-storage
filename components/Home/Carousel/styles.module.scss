@@ -41,7 +41,11 @@
 @media screen and (max-width: $mobile-width) {
   .image-container {
     img {
-      min-height: 30vh;
+      min-height: 60vw;
     }
+  }
+  .description {
+    padding: 0 40px;
+    padding-right: 30px;
   }
 }
