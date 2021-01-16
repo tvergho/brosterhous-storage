@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import useForm from 'utils/useForm';
 import Lottie from 'react-lottie';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 import Input from './Input';
 import * as animationData from './confirm.json';
 import styles from './styles.module.scss';
@@ -39,6 +40,17 @@ const FormSection = () => {
   const onSubmit = () => {
     if (validate()) {
       setSubmitted(true);
+      const {
+        name, email, phone, description,
+      } = values;
+      axios({
+        url: '/api/send-email',
+        method: 'post',
+        headers: { 'content-type': 'application/json' },
+        data: {
+          name, email, phone, description,
+        },
+      });
     }
   };
 
