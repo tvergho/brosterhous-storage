@@ -3,4 +3,7 @@ const optimizedImages = require('next-optimized-images');
 
 module.exports = withPlugins([
   [optimizedImages],
+  {
+    target: 'experimental-serverless-trace',
+  },
 ]);
