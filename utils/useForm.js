@@ -2,6 +2,16 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { stripPhone, formatPhone } from './phoneUtils';
 
+/**
+ * Custom hook designed for easy form initialization and validation.
+ * Returns the following:
+ *  values = key-value pair of the names of every input in the form and their respective values.
+ *  onChange = function for controlled inputs to call when their value changes.
+ *  validate = function that updates the errors object and returns true if all inputs have been validated.
+ *  errors = key-value pair of input names and a boolean corresponding to input validation.
+ *
+ * @param {object} config Object defining the names of the inputs in the form and their respective properties.
+ */
 const useForm = (config) => {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
@@ -65,7 +75,7 @@ const useForm = (config) => {
         setError(key);
       }
     }
-    return true;
+    return validated;
   };
 
   return {

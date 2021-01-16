@@ -12,6 +12,7 @@
   border-radius: 10px;
   border: 0.5px solid rgba(0,0,0,0.2);
   padding: 20px;
+  position: relative;
 }
 
 .info-item {
@@ -50,6 +51,21 @@
 
 .map {
   margin: 30px auto;
+}
+
+.confirm {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-direction: column;
+  opacity: 0;
 }
 
 @media screen and (max-width: $container-width) {
