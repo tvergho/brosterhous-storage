@@ -10,7 +10,7 @@ const useStyles = makeStyles({
 });
 
 const CustomInput = ({
-  label, containerName, value, onChange, multiline, rows,
+  label, containerName, multiline, rows, name, error, value, onChange,
 }) => {
   const classes = useStyles();
 
@@ -21,11 +21,12 @@ const CustomInput = ({
         fullWidth
         InputLabelProps={{ className: classes.root }}
         inputProps={{ className: classes.root }}
-        value={value}
-        onChange={onChange}
         multiline={multiline}
         rows={rows}
-        required
+        name={name}
+        error={error}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );
@@ -34,10 +35,12 @@ const CustomInput = ({
 CustomInput.propTypes = {
   label: PropTypes.string,
   containerName: PropTypes.string,
-  value: PropTypes.string,
-  onChange: PropTypes.func,
   multiline: PropTypes.bool,
   rows: PropTypes.number,
+  name: PropTypes.string,
+  error: PropTypes.bool,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default CustomInput;
