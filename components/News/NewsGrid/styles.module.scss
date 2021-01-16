@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+.grid {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: $mobile-width) {
+  .grid {
+    margin-top: 20px;
+  }
+}
