@@ -32,7 +32,7 @@ const ImageCarousel = ({ images, width, height }) => {
               <div className={styles.description}>
                 <p>{description}</p>
               </div>
-              <Image responsive src={src} key={description} objectFit="cover" />
+              <Image width={1024} height={416} src={src} key={description} objectFit="cover" responsive />
             </div>
           ))}
         </Carousel>
