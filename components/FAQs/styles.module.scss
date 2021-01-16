@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+.questions {
+  margin-bottom: 50px;
+}
+
+.question-item {
+  margin: 10px 0;
+}
+
+.question-header {
+  background: 0;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+}
+
+.title {
+  margin-left: 10px !important;
+}
+
+.answer {
+  margin-top: -1rem;
+  margin-left: 20px;
+  overflow: hidden;
+  height: 0px;
+
+  a {
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .questions {
+    margin-bottom: 30px;
+  }
+}
