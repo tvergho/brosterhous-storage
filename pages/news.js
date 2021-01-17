@@ -13,7 +13,7 @@ const NewsPage = ({ posts }) => {
     <>
       <NextSeo
         title={`News and Specials | ${SITE_NAME}`}
-        description="Check out the specials and latest news for Brosterhous Storage."
+        description="Check out the specials and latest news for Brosterhous Storage, located in Bend, OR."
       />
       <PageTitle title="News and Specials" />
       <SidebarLayout>

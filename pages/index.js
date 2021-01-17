@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <NextSeo
         title={`Home | ${SITE_NAME}`}
-        description="Ready for some spring cleaning? We'll make sure your extra furniture, files, or appliances are safely stored until you need them again."
+        description="Brosterhous Storage in Bend, OR offers storage for your extra furniture, files, or appliances until you need them again. Reserve units starting at $58/month."
       />
       <Carousel width={1024} height={isMobile ? '100%' : 416} images={HOME_IMAGES} />
       <PricingTable prices={PRICING_TABLE} />

@@ -9,7 +9,7 @@ const PricesPage = () => {
     <>
       <NextSeo
         title={`Unit Sizes and Prices | ${SITE_NAME}`}
-        description={`Check out our available storage units and RV spaces. Call us at ${PHONE} for availability.`}
+        description={`Check out our available storage units and RV spaces. Units start at $58/month. Call us at ${PHONE} for availability.`}
       />
       <PageTitle title="Unit Sizes and Prices" />
       <PricingTable prices={PRICING_TABLE} />
