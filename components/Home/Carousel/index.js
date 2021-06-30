@@ -28,7 +28,7 @@ const ImageCarousel = ({ images, width, height }) => {
           renderCenterRightControls={({ nextSlide }) => (<SlideButton asset={RightArrow} onClick={nextSlide} />)}
         >
           {images.map(({ src, description }) => (
-            <div className={styles['image-container']}>
+            <div className={styles['image-container']} key={src}>
               <div className={styles.description}>
                 <p>{description}</p>
               </div>

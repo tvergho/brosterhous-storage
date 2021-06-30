@@ -12,7 +12,7 @@ const PricingTable = ({ prices }) => {
         {prices.map(({
           size, type, price, buttonText, buttonLink,
         }) => (
-          <div className={styles.row}>
+          <div className={styles.row} key={size}>
             {(!isMobile || size) && <div className={`${styles.cell} ${styles.size}`}>{size}</div>}
             <div className={`${styles.cell} ${styles.type}`}>{type}</div>
             <div className={`${styles.cell} ${styles.price}`}>{price}</div>
