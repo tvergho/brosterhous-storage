@@ -29,11 +29,7 @@ const InfoSection = ({
 
       <div className={styles['info-item']}>
         <h4>Office Hours</h4>
-        {hours.map((line) => {
-          const split = line.split(':');
-          if (split.length <= 1) split.push('');
-          return (<p className={styles.sub} key={split[0]}><strong>{`${split[0]}: `}</strong>{split[1]}</p>);
-        })}
+        <p className={styles.sub}>By appointment only.</p>
       </div>
     </div>
   );

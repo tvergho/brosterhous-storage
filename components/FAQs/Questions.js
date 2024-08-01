@@ -38,7 +38,7 @@ const Questions = () => {
         <p>Daily, from 5:30am to 10pm.</p>
       </QuestionItem>
       <QuestionItem question="What are Brosterhous Storage office hours?">
-        <p>Monday, Tuesday, Wednesday, and Friday 10 a.m. to 1 p.m. Other days/times by appointment only.</p>
+        <p>We are available by appointment only. Contact us to make an appointment.</p>
       </QuestionItem>
       <QuestionItem question="If I forget my access code or lose my key, what do I do?">
         <p>Call for assistance during regular business hours. If you lose your key, we can remove your lock free of charge and you can purchase a replacement one from Brosterhous Storage.</p>
