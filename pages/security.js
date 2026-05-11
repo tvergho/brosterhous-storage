@@ -17,7 +17,7 @@ const SecurityPage = () => {
       <SidebarLayout>
         <SidebarLayout.Main>
           <p>The security of your possessions is our primary concern.
-            Our facilities are safeguarded behind 7 foot fencing topped with barb wire and extensive lighting, and our entire facility is under constant 24 hour closed circuit camera surveillance.
+            Our facilities are safeguarded behind 7 foot fencing topped with barb wire and extensive lighting, and key areas of our facility are under 24 hour closed circuit camera surveillance.
           </p>
 
           <h2>You Lock It, You Keep the Key</h2>
